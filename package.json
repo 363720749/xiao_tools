@@ -1,0 +1,19 @@
+{
+  "name": "aijxdp_xiao_tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/363720749/xiao_tools.git"
+  },
+  "author": "xiao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/363720749/xiao_tools/issues"
+  },
+  "homepage": "https://github.com/363720749/xiao_tools#readme"
+}
