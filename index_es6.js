@@ -9,11 +9,13 @@ export default {
 
 
   //可链式 示例 ask(shuJu, ".item.name")
-  ask(obj, keyName, isNoStr = '--') {
+  ask(obj, keyName, isNoStr = '--',isEval) {
     try {
       // debugger
-      /* eval(`keyName = obj${keyName.replace(/\s/g, '').replace(/\?/g, '').split('.').join('?.')}`);
-      return keyName === 0 ? keyName : keyName || isNoStr; */
+     if(isEval){
+      eval(`keyName = obj${keyName.replace(/\s/g, '').replace(/\?/g, '').split('.').join('?.')}`);
+      return keyName === 0 ? keyName : keyName || isNoStr;
+     }
 
       if (!obj) return isNoStr;
       let keys = keyName.replace(/\s/g, '').replace(/\?/g, '').split('.');
@@ -58,13 +60,10 @@ export default {
   //时间 时分秒
   increment(time) {
     time = parseFloat(time);
-    var h = Math.floor(time / 3600);
-    var m = Math.floor((time % 3600) / 60);
-    var s = Math.floor((time % 3600) % 60);
-    var hDisplay = h > 0 ? h + (h == 1 ? ":" : ":") : "";
-    var mDisplay = m > 0 ? m + (m == 1 ? ":" : ":") : "";
-    var sDisplay = s > 0 ? s + (s == 1 ? "0" : "") : "";
-    return hDisplay + mDisplay + sDisplay;
+    var h = Math.floor(time / 3600).padStart(1, "0");
+    var m = Math.floor((time % 3600) / 60).padStart(2, "0");
+    var s = Math.floor((time % 3600) % 60).padStart(2, "0");
+    return `${h}:${m}:${s}`;
   },
 }
 

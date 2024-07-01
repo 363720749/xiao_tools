@@ -1,7 +1,7 @@
 {
   "name": "aijxdp_xiao_tools",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.5",
+  "description": "一些自己常用的函数",
   "main": "index.js",
   "scripts": {
     "dev": "babel index_es6.js --out-file index.js",
