@@ -71,9 +71,9 @@ exports.default = {
   //时间 时分秒
   increment: function increment(time) {
     time = parseFloat(time);
-    var h = Math.floor(time / 3600).padStart(1, "0");
-    var m = Math.floor(time % 3600 / 60).padStart(2, "0");
-    var s = Math.floor(time % 3600 % 60).padStart(2, "0");
+    var h = Math.floor(time / 3600).toString().padStart(1, "0");
+    var m = Math.floor(time % 3600 / 60).toString().padStart(2, "0");
+    var s = Math.floor(time % 3600 % 60).toString().padStart(2, "0");
     return h + ':' + m + ':' + s;
   }
 };
