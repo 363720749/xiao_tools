@@ -1,6 +1,6 @@
 {
   "name": "aijxdp_xiao_tools",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "一些自己常用的函数",
   "main": "index.js",
   "scripts": {
